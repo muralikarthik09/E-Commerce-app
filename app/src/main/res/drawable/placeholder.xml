@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- gray background -->
+    <path
+        android:fillColor="#FFEEEEEE"
+        android:pathData="M0,0 H24 V24 H0 Z"/>
+
+    <!-- image outline -->
+    <path
+        android:strokeColor="#FFBBBBBB"
+        android:strokeWidth="2"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M3,3 H21 V21 H3 Z"/>
+
+    <!-- mountain peaks -->
+    <path
+        android:strokeColor="#FFBBBBBB"
+        android:strokeWidth="2"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M5,17 L9,12 L12,16 L15,12 L20,18"/>
+
+    <!-- sun (circle replaced by a small oval path) -->
+    <path
+        android:fillColor="#FFBBBBBB"
+        android:pathData="
+            M15,6
+            a2,2 0 1,0 0,4
+            a2,2 0 1,0 0,-4
+        "/>
+</vector>

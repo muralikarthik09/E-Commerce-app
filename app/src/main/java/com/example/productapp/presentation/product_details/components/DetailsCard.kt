@@ -31,7 +31,7 @@ fun DetailsCard(
     ) {
         AsyncImage(
             model = ImageRequest.Builder(LocalContext.current)
-                .data(product.imageUrl)
+                .data("https://picsum.photos/200/300")
                 .crossfade(true)
                 .build(),
             placeholder = painterResource(R.drawable.placeholder),

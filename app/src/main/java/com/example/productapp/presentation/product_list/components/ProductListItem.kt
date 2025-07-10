@@ -29,7 +29,7 @@ fun ProductListItem(product: Product, onClick: (Int) -> Unit) {
             .padding(16.dp)
     ) {
         AsyncImage(
-            model = product.imageUrl,
+            model = "https://picsum.photos/200/300",
             contentDescription = null,
             contentScale = ContentScale.Crop,
             placeholder = painterResource(R.drawable.placeholder),

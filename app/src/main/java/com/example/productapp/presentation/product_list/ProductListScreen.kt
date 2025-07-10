@@ -6,12 +6,10 @@ import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.example.productapp.presentation.common.ErrorState
 import com.example.productapp.presentation.common.LoadingState
-import com.example.productapp.data.remote.RetrofitInstance
-import com.example.productapp.data.repository.ProductRepositoryImpl
-import com.example.productapp.domain.usecases.GetProductsUseCase
 import com.example.productapp.presentation.product_list.components.ProductListContent
 import com.example.productapp.presentation.state.UIState
 
@@ -19,14 +17,9 @@ import com.example.productapp.presentation.state.UIState
 @Composable
 fun ProductListScreen(
     onItemClick: (Int) -> Unit,
-    navController: NavController
+    navController: NavController,
+    viewModel: ProductListViewModel = hiltViewModel()
 ) {
-    val viewModel = remember {
-        ProductListViewModel(
-            GetProductsUseCase(ProductRepositoryImpl(RetrofitInstance.api))
-        )
-    }
-
     val uiState by viewModel.uiState.collectAsState()
 
     Scaffold(
